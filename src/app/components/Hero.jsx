@@ -22,7 +22,8 @@ export default function Hero() {
         }}
       />
 
-      <div className="relative max-w-7xl mx-auto px-6 py-28 grid md:grid-cols-2 gap-10 items-center">
+      {/* IMPORTANT FIX: Use px-4 and max-w-[1200px] */}
+      <div className="relative w-full max-w-[1200px] mx-auto px-4 sm:px-6 py-28 grid md:grid-cols-2 gap-10 items-center">
         {/* Left Content */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -86,7 +87,7 @@ export default function Hero() {
           className="hidden md:flex justify-center"
         >
           <motion.div
-            className="w-96 h-96 rounded-full bg-white/10 flex items-center justify-center"
+            className="w-80 h-80 rounded-full bg-white/10 flex items-center justify-center"
             animate={{ rotate: [0, 360, 0] }}
             transition={{ duration: 8, repeat: Infinity }}
           >
