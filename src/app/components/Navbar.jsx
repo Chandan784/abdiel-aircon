@@ -18,8 +18,8 @@ export default function Navbar() {
   ];
 
   return (
-    <header className="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md shadow">
-      <nav className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+    <header className="fixed top-0 left-0 right-0 w-full z-50 bg-white/80 backdrop-blur-md shadow">
+      <nav className="w-full max-w-full mx-auto px-4 py-3 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="text-2xl font-bold text-blue-600">
           ABDIEL<span className="text-gray-800">AIRCON</span>
@@ -59,7 +59,7 @@ export default function Navbar() {
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            className="md:hidden bg-white shadow-lg"
+            className="md:hidden bg-white shadow-lg overflow-hidden"
           >
             <div className="flex flex-col px-6 py-4 space-y-4">
               {navItems.map((item) => (
