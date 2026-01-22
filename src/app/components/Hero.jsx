@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { PhoneCall, Wrench, Snowflake } from "lucide-react";
+import { PhoneCall, Wrench, Snowflake, Thermometer } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -85,13 +85,13 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
           className="hidden md:flex justify-center"
         >
-          <motion.img
-            src="https://cdn-icons-png.flaticon.com/512/1046/1046857.png"
-            alt="AC Service"
-            className="w-96 drop-shadow-2xl"
-            animate={{ y: [0, -15, 0] }}
-            transition={{ duration: 4, repeat: Infinity }}
-          />
+          <motion.div
+            className="w-96 h-96 rounded-full bg-white/10 flex items-center justify-center"
+            animate={{ rotate: [0, 360, 0] }}
+            transition={{ duration: 8, repeat: Infinity }}
+          >
+            <Thermometer size={120} />
+          </motion.div>
         </motion.div>
       </div>
     </section>
